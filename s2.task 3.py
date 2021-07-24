@@ -1,25 +1,53 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[7]:
+# In[1]:
 
 
 i=0
 while(i==0):
-    a=input("Enter the first number:")
-    if(a.isdigit()==True):
+    a=input("enter the first number: ")
+    dotcount=0
+    numcount=0
+    i2=0
+    for character in a:
+        if(ord(character)==46):
+            dotcount+=1
+            if(dotcount==2):
+                print("wrong input try again")
+                i2=1
+        elif(ord(character)>=48 and ord(character)<=57):
+            numcount+=1
+        else:
+            print("wrong input try again")
+            i2=1
+    if(i2==1):
+        i=0
+    elif(i2==0 and numcount>0):
         i=1
-        a=int(a)
-    else:
-        print("wrong input try again")
+a=float(a)
 i=0
 while(i==0):
-    b=input("Enter the second number:")
-    if(b.isdigit()==True):
+    b=input("enter the second number: ")
+    dotcount=0
+    numcount=0
+    i2=0
+    for character in b:
+        if(ord(character)==46):
+            dotcount+=1
+            if(dotcount==2):
+                print("wrong input try again")
+                i2=1
+        elif(ord(character)>=48 and ord(character)<=57):
+            numcount+=1
+        else:
+            print("wrong input try again")
+            i2=1
+    if(i2==1):
+        i=0
+    elif(i2==0 and numcount>0):
         i=1
-        b=int(b)
-    else:
-        print("wrong input try again")
+b=float(b)
 i=0
 while(i==0):
     c=input("enter the operation as + , - ,/ ,*:")
